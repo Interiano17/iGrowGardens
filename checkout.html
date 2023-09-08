@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>iGrowGardens</title>
+        <!-- Favicon-->
+        <link rel="icon" href="icono.ico">
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="assets/CSS/styles.css" rel="stylesheet" />
+    </head>
+    <body onload = "loadCheckout()">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#619911;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="" width="100" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rewards.html">Recompensas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
+                        
+                    </ul>
+                    <form class="d-flex">
+                      <button class="btn btn-outline-dark">
+                        <a href="cart.html" id="cartButton">
+                            <i class="bi-cart-fill me-1"></i>
+                            Carrito
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                           </a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container container__articulos">
+            <div class="row">
+              <div class="col-md-4 order-md-2 mb-4">
+                    <div class="card">
+                      <table class="table table-borderless" id="fullTableExpenses">
+                        <thead class="table-dark">
+                          <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody id="tableExpenses">
+                    
+                        </tbody>
+                      </table>
+                  </div>
+                  
+                    <div class="card">
+                      <table class="table table-borderless" id="subTotalTable">
+                        <thead class="table-dark">
+                          <tr>
+                            <th scope="col">Subtotal</th>       
+                          </tr>
+                        </thead>
+                        <tbody id="subtotal">
+                    
+                        </tbody>
+                      </table>
+        
+                </div>
+              </div>
+              <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Dirección de Facturación</h4>
+                <form class="needs-validation was-validated" novalidate="">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName">Nombre</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+                       Se requiere un nombre válido.
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName">Apellido</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+                        Se requiere un apellido válido.
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="email">Correo <span class="text-muted">(Opcional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com">
+                    <div class="invalid-feedback">
+                      Por favor ingresar un correo válido.
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="address">Dirección</label>
+                    <input type="text" class="form-control" id="address" placeholder="Dirección" required="">
+                    <div class="invalid-feedback">
+                      Por ingresar dirección de envío.
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="address2">Dirección 2 <span class="text-muted">(Opcional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+          
+                  <div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label for="country">País</label>
+                      <select class="custom-select d-block w-100" id="country" required="">
+                        <option value="">Elegir...</option>
+                        <option>Honduras</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor seleccionar un país válido.
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="state">Provincia</label>
+                      <select class="custom-select d-block w-100" id="state" required="">
+                        <option value="">Elegir...</option>
+                        <option>Francisco Morazán</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor ingresar una provincia válida.
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="zip">Código postal</label>
+                      <input type="text" class="form-control" id="zip" placeholder="" required="">
+                      <div class="invalid-feedback">
+                        Código postal requerido.
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="same-address">
+                    <label class="custom-control-label" for="same-address">La dirección de envío es la misma que la dirección de facturación</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="save-info">
+                    <label class="custom-control-label" for="save-info">Guardar mi información</label>
+                  </div>
+                  <hr class="mb-4">
+          
+                  <h4 class="mb-3">Pago</h4>
+          
+                  <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                      <label class="custom-control-label" for="credit">Tarjeta de crédito</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                      <label class="custom-control-label" for="debit">Tarjeta de débito</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                      <label class="custom-control-label" for="paypal">PayPal</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="cc-name">Nombre en tarjeta</label>
+                      <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                      <small class="text-muted">Nombre completo que aparece en la tarjeta</small>
+                      <div class="invalid-feedback">
+                        Nombre en tarjeta requerido
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="cc-number">Número de tarjeta</label>
+                      <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                      <div class="invalid-feedback">
+                        Número de tarjeta requerido
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 mb-3">
+                      <label for="cc-expiration">Expiración</label>
+                      <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                      <div class="invalid-feedback">
+                        Fecha de expiración requerida
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="cc-cvv">CVV</label>
+                      <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                      <div class="invalid-feedback">
+                        Código de seguridad requerido
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar a pagar</button>
+                </form>
+              </div>
+            </div>
+          
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+              <p class="mb-1">©2023 iGrowGardens</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacidad</a></li>
+                <li class="list-inline-item"><a href="#">Términos</a></li>
+                <li class="list-inline-item"><a href="#">Soporte</a></li>
+              </ul>
+            </footer>
+          </div>
+          
+
+
+
+
+        <!-- Footer-->
+        <footer class="text-white text-center text-lg-start" id="footer" style="background-color: #23242a;">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!--Grid row-->
+              <div class="row mt-4">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
+        
+                  <p>
+                    Tu compañero en el cuidado de plantas. Nuestra macetera inteligente autoirrigable, con una app integrada, te mantiene conectado al estado de tus plantas en tiempo real. Simplifica tu rutina de cuidado y asegura que tus plantas estén siempre en su mejor estado. 🌿📱🌱
+                  </p>
+        
+                  <p>
+                    iGrowGardens: Cuidado completo, plantas felices.
+                  </p>
+        
+                  <div class="mt-4">
+                    <!-- Facebook -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Dribbble -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-dribbble"></i></a>
+                    <!-- Twitter -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-twitter"></i></a>
+                    <!-- Google + -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                    <!-- Linkedin -->
+                  </div>
+                </div>
+                <!--Grid column-->
+        
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-4 pb-1">Buscar</h5>
+        
+                  <div class="form-outline form-white mb-4">
+                    <input type="text" id="formControlLg" class="form-control form-control-lg">
+                    <label class="form-label" for="formControlLg" style="margin-left: 0px;">Buscar</label>
+                  <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        
+                  <ul class="fa-ul" style="margin-left: 1.65em;">
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Tegucigalpa, Boulevard Morazán, Quinta Calle</span>
+                    </li>
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">iGrowGardens@gmail.com</span>
+                    </li>
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+504 9843-2312</span>
+                    </li>
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+504 9843-2312</span>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+        
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-4">Horario</h5>
+        
+                  <table class="table text-center text-white">
+                    <tbody class="font-weight-normal">
+                      <tr>
+                        <td>Lunes - Jueves:</td>
+                        <td>8am - 9pm</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes - Sábado:</td>
+                        <td>8am - 1pm</td>
+                      </tr>
+                      <tr>
+                        <td>Domingo:</td>
+                        <td>9am - 10pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+        
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2023 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">iGrowGardens.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+                  <script src="form-validation.js"></script>
+        <script src="assets/JS/scriptcart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </body>
+</html>

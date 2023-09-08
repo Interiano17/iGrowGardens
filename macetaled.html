@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>iGrowGardens</title>
+        <!-- Favicon-->
+        <link rel="icon" href="icono.ico">
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="assets/CSS/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#619911;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="" width="100" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rewards.html">Recompensas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#related">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
+                        
+                    </ul>
+                    <form class="d-flex">
+                      <button class="btn btn-outline-dark">
+                        <a href="cart.html" id="cartButton">
+                            <i class="bi-cart-fill me-1"></i>
+                            Carrito
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                           </a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="assets/img/maceta5-maceta-con-luz-led.jpg" alt="..." /></div>
+                    <div class="col-md-6">
+                        <div class="small mb-1">SKU: BST-498</div>
+                        <h1 class="display-5 fw-bolder">Maceta con luz LED</h1>
+                        <div class="fs-5 mb-5">                          
+                            <span>Lps 2,500.00</span>
+                        </div>
+                        <p class="lead">Los maceteros Led con carga solar y eléctrica, están elaborados en polietileno blanco, un material 100% reciclable, muy resistente y que soporta choques y condiciones meteorológicas adversas. Están fabricados para estar a la intemperie y son resistentes a los rayos UV.</p>
+                        <div class="d-flex">
+                          
+                            <button class="btn btn-outline-dark flex-shrink-0" onclick="addItem5()" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related items section-->
+        <section class="py-5 bg-light" id="related">
+            <div class="container px-4 px-lg-5 mt-5 relatedProducts">
+                <h2 class="fw-bolder mb-4">Productos relacionados</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="assets/img/maceta1-rokita-inteligente.jpg" width="223" height="268" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Maceta Rokita Inteligente</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">Lps 2,000.00</span>
+                                    Lps 1,800.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="rokita.html">Ver opciones</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="assets/img/maceta2-maceta-akuaraiz.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Maceta Akuaraíz</h5>
+                                    <!-- Product price-->
+                                    Lps 1,500.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="akuaraiz.html">Ver opciones</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="assets/img/maceta3-maceta-inteligente.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Maceta Inteligente</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">Lps 2,300.00</span>
+                                    Lps 2,000.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="inteligente.html">Ver opciones</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="assets/img/maceta4-maceta-air-grower.jpg" width="223" height="268" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Maceta Air Grower</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">Lps 3,550.00</span>
+                                    Lps 3,450.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="airgrower.html">Ver opciones</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="text-white text-center text-lg-start" id="footer" style="background-color: #23242a;">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!--Grid row-->
+              <div class="row mt-4">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
+        
+                  <p>
+                    Tu compañero en el cuidado de plantas. Nuestra macetera inteligente autoirrigable, con una app integrada, te mantiene conectado al estado de tus plantas en tiempo real. Simplifica tu rutina de cuidado y asegura que tus plantas estén siempre en su mejor estado. 🌿📱🌱
+                  </p>
+        
+                  <p>
+                    iGrowGardens: Cuidado completo, plantas felices.
+                  </p>
+        
+                  <div class="mt-4">
+                    <!-- Facebook -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Dribbble -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-dribbble"></i></a>
+                    <!-- Twitter -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-twitter"></i></a>
+                    <!-- Google + -->
+                    <a type="button" class="btn btn-floating btn-success btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                    <!-- Linkedin -->
+                  </div>
+                </div>
+                <!--Grid column-->
+        
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-4 pb-1">Buscar</h5>
+        
+                  <div class="form-outline form-white mb-4">
+                    <input type="text" id="formControlLg" class="form-control form-control-lg">
+                    <label class="form-label" for="formControlLg" style="margin-left: 0px;">Buscar</label>
+                  <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        
+                  <ul class="fa-ul" style="margin-left: 1.65em;">
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Tegucigalpa, Boulevard Morazán, Quinta Calle</span>
+                    </li>
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">iGrowGardens@gmail.com</span>
+                    </li>
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+504 9843-2312</span>
+                    </li>
+                    <li class="mb-3">
+                      <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+504 9843-2312</span>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+        
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-4">Horario</h5>
+        
+                  <table class="table text-center text-white">
+                    <tbody class="font-weight-normal">
+                      <tr>
+                        <td>Lunes - Jueves:</td>
+                        <td>8am - 9pm</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes - Sábado:</td>
+                        <td>8am - 1pm</td>
+                      </tr>
+                      <tr>
+                        <td>Domingo:</td>
+                        <td>9am - 10pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+        
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2023 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">iGrowGardens.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="assets/JS/scriptcart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </body>
+</html>

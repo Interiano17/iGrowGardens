@@ -1,0 +1,78 @@
+@import "../../vendors/bootstrap-5.2/bootstrap.scss";
+@import "../../vendors/bootstrap-5.2/reboot.scss";
+
+img{
+    object-fit: cover;
+    object-position: center center;
+}
+
+.titulo, #precio{
+    text-align: center;
+}
+
+#carouselExampleIndicators2{
+    padding-bottom: 50px;
+}
+
+.navbar-nav, li{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.titulo{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+body{
+    background-color: rgb(228 228 228);
+}
+
+.container__articulos{
+    margin-bottom: 450px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+#cartButton{
+    color:white;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color:#619911;
+    padding-top:20px;
+}
+
+body{
+    position: relative;
+    padding-bottom: 7em;
+    min-height: 100vh;
+}
+
+.footer__text, .display-4, .texti{
+    color: white;
+}
+
+.relatedProducts{
+    margin-bottom: 400px;
+}
+
+.jumbotron{
+    background-image: url("../img/background.jpg");
+    height: 400px;
+}
